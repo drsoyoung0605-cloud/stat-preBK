@@ -1,375 +1,117 @@
-/* Premium Academic Style - Fixed PC Layout */
+/* Global Theme */
 :root {
     --pnu-blue: #005A9B;
     --pnu-blue-light: #f4f9ff;
-    --pnu-blue-dark: #003e6b;
     --pnu-gold: #A68B53;
-    --pnu-gold-light: #fdfaf3;
     --text-main: #1a202c;
     --text-muted: #4a5568;
-    --bg-main: #ffffff;
-    --bg-light: #f8fafc;
     --border-color: #e2e8f0;
-    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; color: var(--text-main); min-width: 1250px; }
+.container { width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height: 1.7;
-    color: var(--text-main);
-    background-color: var(--bg-main);
-    -webkit-font-smoothing: antialiased;
-    min-width: 1250px;
-}
-
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header & Nav */
-.header {
-    background-color: rgba(255, 255, 255, 0.98);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-}
-
-.logo a {
-    font-size: 30px;
-    font-weight: 900;
-    color: var(--pnu-blue);
-    letter-spacing: -1px;
-}
-
-.nav ul {
-    display: flex;
-    gap: 40px;
-}
-
-.nav a {
-    font-weight: 600;
-    color: #4a5568;
-    font-size: 17px;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: var(--pnu-blue);
-}
-
-/* Hero Section */
-.hero {
-    background: radial-gradient(circle at top right, var(--pnu-blue-light), #ffffff);
-    padding: 150px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
+/* 1. Headline Font (90% size) */
 .team-official-name {
     display: inline-block;
     background-color: var(--pnu-blue);
     color: #ffffff;
-    padding: 15px 45px;
-    border-radius: 60px;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 45px;
-    box-shadow: 0 15px 30px rgba(0, 90, 155, 0.15);
-    border: 3px solid var(--pnu-gold);
-}
-
-.hero h2 {
-    font-size: 56px;
-    font-weight: 900;
-    color: #111;
-    margin-bottom: 30px;
-    line-height: 1.2;
-    letter-spacing: -2px;
-}
-
-.hero p {
-    font-size: 24px;
-    color: var(--text-muted);
-    margin-bottom: 50px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Sections */
-.section {
-    padding: 120px 0;
-}
-
-.bg-light {
-    background-color: var(--bg-light);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.section-title h2 {
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--pnu-blue);
-    position: relative;
-    display: inline-block;
-}
-
-.section-title h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 5px;
-    background: var(--pnu-gold);
-    margin: 20px auto 0;
-    border-radius: 3px;
-}
-
-/* Vision Points */
-.vision-points {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.v-point {
-    background: #fff;
-    padding: 60px 40px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: var(--card-shadow);
-    border: 1px solid var(--border-color);
-}
-
-/* Strategy Cards */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.card {
-    background: #fff;
-    padding: 50px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: var(--card-shadow);
-    border: 1px solid var(--border-color);
-}
-
-/* Roadmap */
-.roadmap-steps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.step {
-    background: #fff;
-    width: 800px;
-    padding: 40px;
-    border-radius: 20px;
-    border-left: 10px solid var(--pnu-blue);
-    box-shadow: var(--card-shadow);
-}
-
-/* Team Section (Premium Enhancement) */
-.team-leader-card {
-    background: #fff;
-    border-radius: 30px;
-    padding: 80px 60px;
-    margin-bottom: 100px;
-    box-shadow: 0 25px 50px -12px rgba(0, 90, 155, 0.1);
-    border: 1px solid var(--pnu-blue-light);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.leader-info .badge {
-    display: inline-block;
-    background-color: var(--pnu-blue);
-    color: #fff;
-    padding: 10px 30px;
+    padding: 12px 35px;
     border-radius: 50px;
-    font-size: 28px;
+    font-size: 25.2px; /* 28px * 0.9 */
     font-weight: 800;
-    margin-bottom: 25px;
-}
-
-.leader-info h3 {
-    font-size: 31.5px; /* 기존 42px * 0.75 */
-    font-weight: 900;
-    color: #111;
-    margin-bottom: 15px;
-}
-
-.leader-info .specialty {
-    font-size: 22px;
-    color: var(--pnu-gold); /* Gold 색상 유지 */
-    font-weight: 700;
     margin-bottom: 40px;
+    border: 2px solid var(--pnu-gold);
 }
 
-.faculty-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.faculty-card {
-    background: #fff;
-    padding: 60px 40px;
-    border-radius: 30px;
-    border: 1px solid var(--border-color);
-    text-align: center;
-    transition: 0.4s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.faculty-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--card-shadow);
-    border-color: var(--pnu-blue-light);
-}
-
-.faculty-card h3 {
-    font-size: 39px; /* 기존 26px * 1.5 */
-    font-weight: 800;
-    color: var(--pnu-blue);
-    margin-bottom: 15px;
-}
-
-.faculty-card .specialty {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--pnu-gold); /* 모든 교수진 연구분야 Gold 색상 적용 */
-    margin-bottom: 25px;
-}
-
-.faculty-card .desc {
-    font-size: 17px;
-    color: var(--text-muted);
-    margin-bottom: 30px;
-    min-height: 60px;
-}
-
-/* Research Performance Tabs (Ensuring Hidden Initially) */
-.tab-btn {
-    width: 100%;
-    max-width: 350px;
-    padding: 15px;
+/* 2. 'Learn More' Tab Design (+30% font) */
+.btn-tab {
+    display: inline-block;
     background: #fff;
     color: var(--pnu-blue);
+    padding: 15px 45px;
     border: 2px solid var(--pnu-blue);
-    border-radius: 12px;
+    border-radius: 10px 10px 0 0; /* Tab shape */
+    font-size: 23.4px; /* 18px * 1.3 */
     font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
 }
+.btn-tab:hover { background: var(--pnu-blue); color: #fff; transform: translateY(-5px); }
 
-.tab-btn:hover, .tab-btn.active {
-    background: var(--pnu-blue);
-    color: #fff;
-}
+/* Hero h2 */
+.hero h2 { font-size: 56px; font-weight: 900; margin-bottom: 25px; }
 
-.research-content {
-    max-height: 0;
-    overflow: hidden;
-    width: 100%;
-    background: var(--bg-light);
-    border-radius: 15px;
-    transition: max-height 0.5s ease-out, padding 0.3s ease;
-    opacity: 0;
-}
+/* Section Titles */
+.section { padding: 120px 0; }
+.section-title h2 { font-size: 42px; font-weight: 800; color: var(--pnu-blue); margin-bottom: 20px; }
+.sub-30 { font-size: 23.4px !important; color: var(--text-muted); font-weight: 500; margin-bottom: 60px; } /* Title subtext +30% */
 
-.research-content.active {
-    max-height: 1000px;
-    padding: 30px;
-    margin-top: 25px;
-    opacity: 1;
-}
+/* 4. Vision Section (3x Icons) */
+.vision-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.v-point { background: #fff; padding: 50px 30px; border-radius: 20px; border: 1px solid var(--border-color); text-align: center; box-shadow: var(--card-shadow); }
+.v-icon { font-size: 150px; margin-bottom: 20px; } /* 50px * 3 = 150px */
+.v-point p { font-size: 20px; font-weight: 600; }
 
-.research-content ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
+/* 6. Strategy Section (3x Icons) */
+.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card { background: #fff; padding: 40px 20px; border-radius: 15px; border: 1px solid var(--border-color); text-align: center; box-shadow: var(--card-shadow); }
+.card-icon-large { font-size: 144px; margin-bottom: 20px; } /* 48px * 3 = 144px */
+.card h3 { font-size: 24px; color: var(--pnu-blue); margin-bottom: 15px; }
 
-.research-content ul li {
-    font-size: 15px;
-    margin-bottom: 12px;
-    padding-left: 20px;
-    position: relative;
-}
+/* 8. Roadmap Section (Centered, +30% font, Icons) */
+.roadmap-steps { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.step { background: #fff; width: 900px; padding: 50px; border-radius: 25px; border-top: 8px solid var(--pnu-blue); box-shadow: var(--card-shadow); text-align: center; }
+.step-icon { font-size: 80px; margin-bottom: 20px; }
+.step-number { color: var(--pnu-gold); font-weight: 900; font-size: 20px; }
+.step h3 { font-size: 32px; color: var(--pnu-blue); margin: 10px 0; }
+.step-desc-large { font-size: 24.7px; font-weight: 500; } /* 19px * 1.3 */
+.step-arrow { font-size: 40px; color: var(--pnu-gold); }
 
-.research-content ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--pnu-gold);
-    font-weight: bold;
-}
+/* 10. Research Capability (Premium Design) */
+.premium-research-container { background: #fff; padding: 60px; border-radius: 40px; box-shadow: var(--card-shadow); }
+.res-item { display: flex; align-items: center; gap: 30px; padding: 30px 0; border-bottom: 1px solid var(--border-color); }
+.res-item:last-child { border-bottom: none; }
+.res-tag { background: var(--pnu-blue-light); color: var(--pnu-blue); padding: 10px 25px; border-radius: 30px; font-weight: 800; font-size: 18px; min-width: 180px; text-align: center; }
+.res-item p { font-size: 20px; line-height: 1.6; }
 
-/* Network */
-.network-section {
-    background: #fff;
-    padding: 100px 60px;
-    border-radius: 40px;
-    box-shadow: var(--card-shadow);
-}
+/* 13. Faculty Section (Expert Redesign) */
+.team-leader-card-premium { background: #fff; border-radius: 40px; padding: 80px; margin-bottom: 80px; box-shadow: 0 30px 60px rgba(0,90,155,0.1); border: 1.5px solid var(--pnu-blue-light); text-align: center; position: relative; }
+.badge-large { background: var(--pnu-blue); color: #fff; padding: 12px 40px; border-radius: 50px; font-size: 28px; font-weight: 900; display: inline-block; margin-bottom: 30px; }
+.prof-name { font-size: 31.5px; font-weight: 900; margin-bottom: 15px; } /* Unified size */
+.specialty-gold { color: var(--pnu-gold); font-size: 22px; font-weight: 700; margin-bottom: 35px; }
+.achievements-box { background: var(--bg-light); padding: 40px; border-radius: 20px; display: inline-block; text-align: left; margin-bottom: 40px; }
+.achievements-box ul li { font-size: 18px; margin-bottom: 15px; padding-left: 30px; position: relative; }
+.achievements-box ul li::before { content: '✔️'; position: absolute; left: 0; }
 
-.logo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-    margin-top: 80px;
-}
+.faculty-grid-premium { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.faculty-card-v2 { background: #fff; padding: 60px 40px; border-radius: 30px; border: 1px solid var(--border-color); text-align: center; transition: 0.4s; }
+.faculty-card-v2:hover { transform: translateY(-10px); box-shadow: var(--card-shadow); }
+.desc-v2 { font-size: 17px; color: var(--text-muted); margin-bottom: 30px; min-height: 70px; }
 
-.logo-item img {
-    height: 60px;
-    margin-bottom: 20px;
-}
+/* 14. Tab Buttons (Reduced size) */
+.tab-btn-sm { background: #fff; color: var(--pnu-blue); border: 2px solid var(--pnu-blue); padding: 10px 25px; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s; width: auto; min-width: 200px; }
+.tab-btn-sm:hover, .tab-btn-sm.active { background: var(--pnu-blue); color: #fff; }
 
-.inst-name {
-    font-family: 'Times New Roman', serif;
-    font-size: 17px;
-    font-weight: 700;
-}
+.research-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; opacity: 0; background: var(--bg-light); width: 100%; border-radius: 15px; }
+.research-content.active { max-height: 800px; padding: 30px; margin-top: 25px; opacity: 1; text-align: left; }
+.research-content ul li { font-size: 15px; margin-bottom: 10px; border-left: 3px solid var(--pnu-gold); padding-left: 15px; list-style: none; }
+
+/* 15. Network Section (Centered, Blue Title) */
+.network-section-centered { background: #fff; padding: 100px 60px; border-radius: 40px; box-shadow: var(--card-shadow); text-align: center; }
+.blue-title { color: var(--pnu-blue) !important; font-size: 36px; font-weight: 800; margin-bottom: 30px; }
+.network-highlights-v2 p { font-size: 20px; margin-bottom: 15px; color: var(--text-main); }
+
+/* 16. Logo Alignment (Centered relative to name) */
+.logo-grid-v2 { display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; margin-top: 80px; align-items: flex-start; }
+.logo-item-centered { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 220px; text-decoration: none; }
+.logo-item-centered img { height: 60px; width: auto; object-fit: contain; }
+.inst-name-centered { font-family: 'Times New Roman', serif; font-size: 17px; font-weight: 700; color: #111; text-align: center; }
 
 /* Footer */
-.footer {
-    background-color: #111;
-    color: #fff;
-    padding: 80px 0;
-    text-align: center;
-}
+.header-container { height: 100px; }
+.footer { background: #111; color: #fff; padding: 80px 0; text-align: center; }
+.footer p { opacity: 0.6; font-size: 16px; }
