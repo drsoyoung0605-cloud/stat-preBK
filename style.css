@@ -421,6 +421,52 @@ ul {
 .faculty-card .desc {
     font-size: 15px;
     color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--pnu-blue-light);
+    color: var(--pnu-blue);
+    border: 1px solid var(--pnu-blue);
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--pnu-blue);
+    color: white;
+}
+
+.research-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background: #fdfdfd;
+    width: 100%;
+    text-align: left;
+}
+
+.research-content.active {
+    max-height: 500px;
+    padding: 20px 0;
+    border-top: 1px dashed var(--border-color);
+    margin-top: 15px;
+}
+
+.research-content ul {
+    padding-left: 20px;
+}
+
+.research-content li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    list-style: disc;
+    color: var(--text-main);
 }
 
 /* Network Section Styles Update */
