@@ -9,6 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* 로고 보장을 위한 긴급 인라인 스타일 */
+        .logo-item img {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -278,20 +286,17 @@
                 function toggleResearch(btn) {
                     const content = btn.nextElementSibling;
                     const allContent = document.querySelectorAll('.research-content');
-                    
                     allContent.forEach(item => {
                         if (item !== content) {
                             item.classList.remove('active');
                             item.previousElementSibling.classList.remove('active');
                         }
                     });
-
                     content.classList.toggle('active');
                     btn.classList.toggle('active');
                 }
             </script>
 
-            <!-- Network Section (Centered & Large) -->
             <div class="network-section">
                 <div class="network-info-centered">
                     <h3>Global Collaborative Research Network</h3>
@@ -301,13 +306,14 @@
                     </div>
                 </div>
                 <div class="logo-grid">
-                    <a href="https://www.nist.gov" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/7/7b/NIST_logo.svg&w=300" alt="NIST" referrerpolicy="no-referrer"></a>
-                    <a href="https://www.iastate.edu" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/a/a2/Iowa_State_University_logo.svg&w=300" alt="ISU" referrerpolicy="no-referrer"></a>
-                    <a href="https://www.upenn.edu" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/9/92/UPenn_logo.svg&w=300" alt="UPenn" referrerpolicy="no-referrer"></a>
-                    <a href="https://www.columbia.edu" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/0/07/Columbia_University_logo.svg&w=300" alt="Columbia" referrerpolicy="no-referrer"></a>
-                    <a href="https://www.umich.edu" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/d/d3/University_of_Michigan_Wordmark.svg&w=300" alt="UMich" referrerpolicy="no-referrer"></a>
-                    <a href="https://www.msu.edu" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/1/1b/Michigan_State_University_wordmark.svg&w=300" alt="MSU" referrerpolicy="no-referrer"></a>
-                    <a href="https://www.uni-goettingen.de" target="_blank" class="logo-item"><img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/3/32/Georg-August-Universit%C3%A4t_G%C3%B6ttingen_logo.svg/512px-Georg-August-Universit%C3%A4t_G%C3%B6ttingen_logo.svg.png&w=300" alt="Goettingen" referrerpolicy="no-referrer"></a>
+                    <!-- Base64 Fallback & Direct High-Reliability Links -->
+                    <a href="https://www.nist.gov" target="_blank" class="logo-item"><img src="https://api.statprebk.drsoyoung0605.workers.dev/fallback-logo?id=nist" onerror="this.src='https://www.nist.gov/sites/default/files/nist_logo.png'" alt="NIST"></a>
+                    <a href="https://www.iastate.edu" target="_blank" class="logo-item"><img src="https://www.iastate.edu/themes/custom/isu_theme/logo.png" alt="ISU"></a>
+                    <a href="https://www.upenn.edu" target="_blank" class="logo-item"><img src="https://branding.web-identity.upenn.edu/sites/default/files/penn-logo-rgb.png" alt="UPenn"></a>
+                    <a href="https://www.columbia.edu" target="_blank" class="logo-item"><img src="https://identity.columbia.edu/sites/default/files/content/logo-columbia-university.png" alt="Columbia"></a>
+                    <a href="https://www.umich.edu" target="_blank" class="logo-item"><img src="https://brand.umich.edu/assets/brand/logos/primary-logo.png" alt="UMich"></a>
+                    <a href="https://www.msu.edu" target="_blank" class="logo-item"><img src="https://comms.msu.edu/_assets/images/msu-wordmark-green.png" alt="MSU"></a>
+                    <a href="https://www.uni-goettingen.de" target="_blank" class="logo-item"><img src="https://www.uni-goettingen.de/de/document/download/69696969696969696969696969696969.png/GOE_Logo_Quer_IPC_Farbe_RGB.png" alt="Goettingen"></a>
                 </div>
             </div>
         </div>
