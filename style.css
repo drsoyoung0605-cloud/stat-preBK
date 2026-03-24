@@ -166,20 +166,73 @@ ul {
     color: var(--text-muted);
 }
 
-/* Vision */
-.vision-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.8;
-    background-color: var(--pnu-gold-light);
-    padding: 40px;
-    border-radius: 10px;
-    border-left: 5px solid var(--pnu-gold);
+/* Vision Section Update */
+.vision-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
 }
 
-/* Strategy Cards */
+.v-point {
+    text-align: center;
+    background: var(--pnu-gold-light);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border-bottom: 5px solid var(--pnu-gold);
+    transition: transform 0.3s ease;
+}
+
+.v-point:hover {
+    transform: translateY(-10px);
+}
+
+.v-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.v-point p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+.v-point strong {
+    color: var(--pnu-blue);
+    font-size: 20px;
+}
+
+/* Network Update */
+.network-highlights {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.network-highlights p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px;
+    display: inline-block;
+}
+
+.network-highlights p::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--pnu-gold);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.network-highlights strong {
+    color: var(--pnu-blue);
+}
+
+/* Logo Grid Update */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
