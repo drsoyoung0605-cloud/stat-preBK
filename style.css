@@ -1,4 +1,4 @@
-/* Global Theme */
+/* Global Theme - Unified Center Alignment */
 :root {
     --pnu-blue: #005A9B;
     --pnu-blue-light: #f4f9ff;
@@ -10,108 +10,87 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; color: var(--text-main); min-width: 1250px; }
+body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; color: var(--text-main); min-width: 1250px; text-align: center; } /* 전역 가운데 정렬 */
 .container { width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* 1. Headline Font (90% size) */
+/* Headline */
 .team-official-name {
     display: inline-block;
     background-color: var(--pnu-blue);
     color: #ffffff;
     padding: 12px 35px;
     border-radius: 50px;
-    font-size: 25.2px; /* 28px * 0.9 */
+    font-size: 25.2px;
     font-weight: 800;
     margin-bottom: 40px;
     border: 2px solid var(--pnu-gold);
 }
 
-/* 2. 'Learn More' Tab Design (+30% font) */
+/* Button Tab */
 .btn-tab {
     display: inline-block;
     background: #fff;
     color: var(--pnu-blue);
     padding: 15px 45px;
     border: 2px solid var(--pnu-blue);
-    border-radius: 10px 10px 0 0; /* Tab shape */
-    font-size: 23.4px; /* 18px * 1.3 */
+    border-radius: 10px 10px 0 0;
+    font-size: 23.4px;
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s;
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
 }
-.btn-tab:hover { background: var(--pnu-blue); color: #fff; transform: translateY(-5px); }
 
-/* Hero h2 */
-.hero h2 { font-size: 56px; font-weight: 900; margin-bottom: 25px; }
-
-/* Section Titles */
+/* Section Title */
 .section { padding: 120px 0; }
 .section-title h2 { font-size: 42px; font-weight: 800; color: var(--pnu-blue); margin-bottom: 20px; }
-.sub-30 { font-size: 23.4px !important; color: var(--text-muted); font-weight: 500; margin-bottom: 60px; } /* Title subtext +30% */
+.sub-30 { font-size: 23.4px !important; color: var(--text-muted); font-weight: 500; margin-bottom: 60px; text-align: center; width: 100%; }
 
-/* 4. Vision Section (3x Icons) */
+/* Vision Section (Icons 50% reduced) */
 .vision-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .v-point { background: #fff; padding: 50px 30px; border-radius: 20px; border: 1px solid var(--border-color); text-align: center; box-shadow: var(--card-shadow); }
-.v-icon { font-size: 150px; margin-bottom: 20px; } /* 50px * 3 = 150px */
-.v-point p { font-size: 20px; font-weight: 600; }
+.v-icon { font-size: 75px; margin-bottom: 20px; } /* 150px -> 75px */
 
-/* 6. Strategy Section (3x Icons) */
+/* Strategy Section (Icons 50% reduced) */
 .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .card { background: #fff; padding: 40px 20px; border-radius: 15px; border: 1px solid var(--border-color); text-align: center; box-shadow: var(--card-shadow); }
-.card-icon-large { font-size: 144px; margin-bottom: 20px; } /* 48px * 3 = 144px */
-.card h3 { font-size: 24px; color: var(--pnu-blue); margin-bottom: 15px; }
+.card-icon-large { font-size: 72px; margin-bottom: 20px; } /* 144px -> 72px */
 
-/* 8. Roadmap Section (Centered, +30% font, Icons) */
+/* Roadmap Section */
 .roadmap-steps { display: flex; flex-direction: column; align-items: center; gap: 40px; }
 .step { background: #fff; width: 900px; padding: 50px; border-radius: 25px; border-top: 8px solid var(--pnu-blue); box-shadow: var(--card-shadow); text-align: center; }
-.step-icon { font-size: 80px; margin-bottom: 20px; }
-.step-number { color: var(--pnu-gold); font-weight: 900; font-size: 20px; }
-.step h3 { font-size: 32px; color: var(--pnu-blue); margin: 10px 0; }
-.step-desc-large { font-size: 24.7px; font-weight: 500; } /* 19px * 1.3 */
-.step-arrow { font-size: 40px; color: var(--pnu-gold); }
+.step-icon { font-size: 40px; margin-bottom: 20px; } /* 80px -> 40px */
+.step-desc-large { font-size: 24.7px; font-weight: 500; text-align: center; }
 
-/* 10. Research Capability (Premium Design) */
-.premium-research-container { background: #fff; padding: 60px; border-radius: 40px; box-shadow: var(--card-shadow); }
-.res-item { display: flex; align-items: center; gap: 30px; padding: 30px 0; border-bottom: 1px solid var(--border-color); }
+/* Research Capability (Centered) */
+.premium-research-container { background: #fff; padding: 60px; border-radius: 40px; box-shadow: var(--card-shadow); text-align: center; }
+.res-item { display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 35px 0; border-bottom: 1px solid var(--border-color); } /* 세로 배치로 변경하여 완벽한 중앙 정렬 */
 .res-item:last-child { border-bottom: none; }
-.res-tag { background: var(--pnu-blue-light); color: var(--pnu-blue); padding: 10px 25px; border-radius: 30px; font-weight: 800; font-size: 18px; min-width: 180px; text-align: center; }
-.res-item p { font-size: 20px; line-height: 1.6; }
+.res-tag { background: var(--pnu-blue-light); color: var(--pnu-blue); padding: 8px 25px; border-radius: 30px; font-weight: 800; font-size: 18px; width: fit-content; margin-bottom: 10px; }
+.res-item p { font-size: 20px; line-height: 1.6; text-align: center; max-width: 900px; }
 
-/* 13. Faculty Section (Expert Redesign) */
-.team-leader-card-premium { background: #fff; border-radius: 40px; padding: 80px; margin-bottom: 80px; box-shadow: 0 30px 60px rgba(0,90,155,0.1); border: 1.5px solid var(--pnu-blue-light); text-align: center; position: relative; }
-.badge-large { background: var(--pnu-blue); color: #fff; padding: 12px 40px; border-radius: 50px; font-size: 28px; font-weight: 900; display: inline-block; margin-bottom: 30px; }
-.prof-name { font-size: 31.5px; font-weight: 900; margin-bottom: 15px; } /* Unified size */
-.specialty-gold { color: var(--pnu-gold); font-size: 22px; font-weight: 700; margin-bottom: 35px; }
-.achievements-box { background: var(--bg-light); padding: 40px; border-radius: 20px; display: inline-block; text-align: left; margin-bottom: 40px; }
-.achievements-box ul li { font-size: 18px; margin-bottom: 15px; padding-left: 30px; position: relative; }
-.achievements-box ul li::before { content: '✔️'; position: absolute; left: 0; }
+/* Faculty Section */
+.team-leader-card-premium { background: #fff; border-radius: 40px; padding: 80px; margin-bottom: 80px; box-shadow: 0 30px 60px rgba(0,90,155,0.1); border: 1.5px solid var(--pnu-blue-light); text-align: center; }
+.achievements-box { background: var(--bg-light); padding: 40px; border-radius: 20px; display: inline-block; text-align: left; margin-bottom: 40px; width: fit-content; }
+.achievements-box ul { display: inline-block; text-align: left; }
 
 .faculty-grid-premium { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
-.faculty-card-v2 { background: #fff; padding: 60px 40px; border-radius: 30px; border: 1px solid var(--border-color); text-align: center; transition: 0.4s; }
-.faculty-card-v2:hover { transform: translateY(-10px); box-shadow: var(--card-shadow); }
-.desc-v2 { font-size: 17px; color: var(--text-muted); margin-bottom: 30px; min-height: 70px; }
+.faculty-card-v2 { background: #fff; padding: 60px 40px; border-radius: 30px; border: 1px solid var(--border-color); text-align: center; display: flex; flex-direction: column; align-items: center; }
+.desc-v2 { font-size: 17px; color: var(--text-muted); margin-bottom: 30px; text-align: center; }
 
-/* 14. Tab Buttons (Reduced size) */
-.tab-btn-sm { background: #fff; color: var(--pnu-blue); border: 2px solid var(--pnu-blue); padding: 10px 25px; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s; width: auto; min-width: 200px; }
-.tab-btn-sm:hover, .tab-btn-sm.active { background: var(--pnu-blue); color: #fff; }
+/* Tabs */
+.tab-btn-sm { background: #fff; color: var(--pnu-blue); border: 2px solid var(--pnu-blue); padding: 10px 25px; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer; width: auto; min-width: 200px; margin: 0 auto; }
+.research-content.active { max-height: 1000px; padding: 30px; margin-top: 25px; opacity: 1; text-align: center; } /* 연구성과도 가운데 정렬 */
+.research-content ul { list-style: none; padding: 0; display: inline-block; text-align: left; } /* 리스트 내용은 왼쪽 정렬하되 뭉치는 중앙으로 */
 
-.research-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; opacity: 0; background: var(--bg-light); width: 100%; border-radius: 15px; }
-.research-content.active { max-height: 800px; padding: 30px; margin-top: 25px; opacity: 1; text-align: left; }
-.research-content ul li { font-size: 15px; margin-bottom: 10px; border-left: 3px solid var(--pnu-gold); padding-left: 15px; list-style: none; }
-
-/* 15. Network Section (Centered, Blue Title) */
+/* Network Section */
 .network-section-centered { background: #fff; padding: 100px 60px; border-radius: 40px; box-shadow: var(--card-shadow); text-align: center; }
-.blue-title { color: var(--pnu-blue) !important; font-size: 36px; font-weight: 800; margin-bottom: 30px; }
-.network-highlights-v2 p { font-size: 20px; margin-bottom: 15px; color: var(--text-main); }
-
-/* 16. Logo Alignment (Centered relative to name) */
 .logo-grid-v2 { display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; margin-top: 80px; align-items: flex-start; }
-.logo-item-centered { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 220px; text-decoration: none; }
-.logo-item-centered img { height: 60px; width: auto; object-fit: contain; }
-.inst-name-centered { font-family: 'Times New Roman', serif; font-size: 17px; font-weight: 700; color: #111; text-align: center; }
+.logo-item-centered { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 220px; text-align: center; }
+
+/* Header Fix */
+.header-container { display: flex; justify-content: space-between; align-items: center; height: 100px; text-align: left; }
+.logo { text-align: left; }
+.nav { text-align: right; }
 
 /* Footer */
-.header-container { height: 100px; }
 .footer { background: #111; color: #fff; padding: 80px 0; text-align: center; }
-.footer p { opacity: 0.6; font-size: 16px; }
