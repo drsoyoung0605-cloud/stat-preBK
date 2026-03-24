@@ -166,7 +166,7 @@ ul {
     color: var(--text-muted);
 }
 
-/* Vision Section Update */
+/* Vision Points */
 .vision-points {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -203,36 +203,7 @@ ul {
     font-size: 20px;
 }
 
-/* Network Update */
-.network-highlights {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    text-align: center;
-}
-
-.network-highlights p {
-    margin-bottom: 15px;
-    font-size: 18px;
-    line-height: 1.6;
-    position: relative;
-    padding-left: 25px;
-    display: inline-block;
-}
-
-.network-highlights p::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--pnu-gold);
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.network-highlights strong {
-    color: var(--pnu-blue);
-}
-
-/* Logo Grid Update */
+/* Strategy Cards */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -329,7 +300,7 @@ ul {
     font-size: 18px;
 }
 
-/* Team Section Styles Update */
+/* Team Section Update */
 .team-leader-card {
     background: #ffffff;
     border-radius: 15px;
@@ -346,15 +317,9 @@ ul {
 .leader-info {
     width: 100%;
     max-width: 800px;
-}
-
-.leader-info .tab-btn {
-    max-width: 300px;
-    margin: 20px auto 0;
-}
-
-.leader-info .research-content {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .badge {
@@ -383,6 +348,7 @@ ul {
 .achievements {
     text-align: left;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .achievements li {
@@ -399,6 +365,19 @@ ul {
     font-weight: bold;
 }
 
+.tab-container-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tab-container-center .tab-btn {
+    max-width: 400px;
+}
+
+/* Faculty Grid */
 .faculty-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -412,6 +391,10 @@ ul {
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .faculty-card:hover {
@@ -438,6 +421,7 @@ ul {
     margin-bottom: 15px;
 }
 
+/* Tabs */
 .tab-btn {
     width: 100%;
     padding: 10px;
@@ -483,23 +467,52 @@ ul {
     color: var(--text-main);
 }
 
-/* Network Section Styles Update */
+/* Network Section Centered & Large */
+.network-section {
     background: #ffffff;
-    padding: 40px;
+    padding: 60px 40px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.network-info-centered {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-.network-info h3 {
+.network-info-centered h3 {
     color: var(--pnu-blue);
-    margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
 }
 
-.network-info p {
-    margin-bottom: 40px;
-    color: var(--text-muted);
+.network-info-centered h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--pnu-gold);
+}
+
+.network-highlights-large {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.network-highlights-large p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.network-highlights-large strong {
+    color: var(--pnu-blue);
 }
 
 .logo-grid {
@@ -518,9 +531,9 @@ ul {
 }
 
 .logo-item img {
-    height: 45px; /* 워드마크는 높이를 약간 줄이는 것이 더 깔끔함 */
+    height: 45px;
     width: auto;
-    max-width: 180px;
+    max-width: 200px;
     transition: all 0.3s ease;
     object-fit: contain;
 }
@@ -529,13 +542,7 @@ ul {
     transform: scale(1.1);
 }
 
-.logo-item span {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-/* Footer Update */
+/* Footer */
 .footer {
     background-color: var(--pnu-blue-dark);
     color: #ffffff;
@@ -559,9 +566,5 @@ ul {
     
     .hero h2 {
         font-size: 32px;
-    }
-    
-    .team-content {
-        flex-direction: column;
     }
 }
