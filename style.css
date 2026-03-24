@@ -29,7 +29,7 @@ body {
     color: var(--text-main);
     background-color: var(--bg-main);
     -webkit-font-smoothing: antialiased;
-    min-width: 1250px; /* PC 전용 고정폭 보장 */
+    min-width: 1250px;
 }
 
 .container {
@@ -92,7 +92,7 @@ body {
     color: #ffffff;
     padding: 15px 45px;
     border-radius: 60px;
-    font-size: 30px; /* 대형 헤드라인 유지 */
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 45px;
     box-shadow: 0 15px 30px rgba(0, 90, 155, 0.15);
@@ -117,7 +117,7 @@ body {
     margin-right: auto;
 }
 
-/* Section Common */
+/* Sections */
 .section {
     padding: 120px 0;
 }
@@ -149,7 +149,7 @@ body {
     border-radius: 3px;
 }
 
-/* 1. Vision Section Fix */
+/* Vision Points */
 .vision-points {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -163,20 +163,9 @@ body {
     text-align: center;
     box-shadow: var(--card-shadow);
     border: 1px solid var(--border-color);
-    transition: 0.4s;
 }
 
-.v-icon {
-    font-size: 60px;
-    margin-bottom: 30px;
-}
-
-.v-point p {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-/* 2. 4 Innovation Strategies Fix */
+/* Strategy Cards */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -190,21 +179,9 @@ body {
     text-align: center;
     box-shadow: var(--card-shadow);
     border: 1px solid var(--border-color);
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--pnu-blue);
-}
-
-.card h3 {
-    font-size: 24px;
-    color: var(--pnu-blue);
-    margin: 20px 0;
-}
-
-/* 3. Education Roadmap Fix */
+/* Roadmap */
 .roadmap-steps {
     display: flex;
     flex-direction: column;
@@ -219,51 +196,9 @@ body {
     border-radius: 20px;
     border-left: 10px solid var(--pnu-blue);
     box-shadow: var(--card-shadow);
-    position: relative;
 }
 
-.step-number {
-    font-weight: 900;
-    color: var(--pnu-gold);
-    font-size: 18px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.step h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
-    color: var(--pnu-blue);
-}
-
-/* 4. Core Research Capabilities Fix */
-.research-list {
-    background: #fff;
-    padding: 60px;
-    border-radius: 30px;
-    box-shadow: var(--card-shadow);
-    list-style: none;
-}
-
-.research-list li {
-    padding: 25px 0;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 19px;
-    display: flex;
-    gap: 20px;
-}
-
-.research-list li:last-child {
-    border-bottom: none;
-}
-
-.research-list li strong {
-    color: var(--pnu-blue);
-    min-width: 300px;
-    display: inline-block;
-}
-
-/* Team Leader Section (Requested Changes) */
+/* Team Section (Premium Enhancement) */
 .team-leader-card {
     background: #fff;
     border-radius: 30px;
@@ -273,11 +208,7 @@ body {
     border: 1px solid var(--pnu-blue-light);
     display: flex;
     justify-content: center;
-    text-align: center; /* 전체 가운데 정렬 */
-}
-
-.leader-info {
-    max-width: 900px;
+    text-align: center;
 }
 
 .leader-info .badge {
@@ -286,14 +217,13 @@ body {
     color: #fff;
     padding: 10px 30px;
     border-radius: 50px;
-    font-size: 28px; /* 기존 대비 약 2배 확대 */
+    font-size: 28px;
     font-weight: 800;
     margin-bottom: 25px;
-    letter-spacing: 2px;
 }
 
 .leader-info h3 {
-    font-size: 42px;
+    font-size: 31.5px; /* 기존 42px * 0.75 */
     font-weight: 900;
     color: #111;
     margin-bottom: 15px;
@@ -301,21 +231,11 @@ body {
 
 .leader-info .specialty {
     font-size: 22px;
-    color: var(--pnu-gold);
+    color: var(--pnu-gold); /* Gold 색상 유지 */
     font-weight: 700;
     margin-bottom: 40px;
 }
 
-.achievements {
-    display: inline-block;
-    text-align: left;
-    background: var(--bg-light);
-    padding: 40px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-}
-
-/* Faculty Grid Fix */
 .faculty-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -324,35 +244,47 @@ body {
 
 .faculty-card {
     background: #fff;
-    padding: 50px 40px;
-    border-radius: 25px;
+    padding: 60px 40px;
+    border-radius: 30px;
     border: 1px solid var(--border-color);
     text-align: center;
     transition: 0.4s;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .faculty-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--card-shadow);
+    border-color: var(--pnu-blue-light);
 }
 
-/* Footer */
-.footer {
-    background-color: #111;
-    color: #fff;
-    padding: 80px 0;
-    text-align: center;
+.faculty-card h3 {
+    font-size: 39px; /* 기존 26px * 1.5 */
+    font-weight: 800;
+    color: var(--pnu-blue);
+    margin-bottom: 15px;
 }
 
-.footer p {
-    opacity: 0.6;
-    font-size: 16px;
+.faculty-card .specialty {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--pnu-gold); /* 모든 교수진 연구분야 Gold 색상 적용 */
+    margin-bottom: 25px;
 }
 
-/* Tabs */
+.faculty-card .desc {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    min-height: 60px;
+}
+
+/* Research Performance Tabs (Ensuring Hidden Initially) */
 .tab-btn {
     width: 100%;
+    max-width: 350px;
     padding: 15px;
     background: #fff;
     color: var(--pnu-blue);
@@ -369,13 +301,42 @@ body {
     color: #fff;
 }
 
+.research-content {
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background: var(--bg-light);
+    border-radius: 15px;
+    transition: max-height 0.5s ease-out, padding 0.3s ease;
+    opacity: 0;
+}
+
 .research-content.active {
     max-height: 1000px;
     padding: 30px;
-    margin-top: 20px;
-    background: var(--bg-light);
-    border-radius: 15px;
+    margin-top: 25px;
+    opacity: 1;
+}
+
+.research-content ul {
+    list-style: none;
+    padding: 0;
     text-align: left;
+}
+
+.research-content ul li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.research-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--pnu-gold);
+    font-weight: bold;
 }
 
 /* Network */
@@ -403,5 +364,12 @@ body {
     font-family: 'Times New Roman', serif;
     font-size: 17px;
     font-weight: 700;
-    color: var(--text-main);
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
 }
