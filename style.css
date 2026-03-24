@@ -84,9 +84,22 @@ ul {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--pnu-blue-light) 0%, #ffffff 100%);
-    padding: 120px 0;
+    padding: 100px 0;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
+}
+
+.team-official-name {
+    display: inline-block;
+    background-color: var(--pnu-blue);
+    color: #ffffff;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 90, 155, 0.2);
+    border: 2px solid var(--pnu-gold);
 }
 
 .hero h2 {
