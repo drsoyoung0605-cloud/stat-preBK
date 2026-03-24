@@ -343,6 +343,20 @@ ul {
     text-align: center;
 }
 
+.leader-info {
+    width: 100%;
+    max-width: 800px;
+}
+
+.leader-info .tab-btn {
+    max-width: 300px;
+    margin: 20px auto 0;
+}
+
+.leader-info .research-content {
+    text-align: left;
+}
+
 .badge {
     background-color: var(--pnu-blue);
     color: white;
