@@ -1,10 +1,10 @@
 /* Base Styles and Reset */
 :root {
-    --pnu-blue: #005A9B; /* PNU Primary Color */
-    --pnu-blue-light: #e6f0f7; /* Very light blue for backgrounds */
-    --pnu-blue-dark: #003e6b; /* Darker blue for hover states */
-    --pnu-gold: #A68B53; /* PNU Secondary Color */
-    --pnu-gold-light: #fdfaf3; /* Light gold for highlights */
+    --pnu-blue: #005A9B;
+    --pnu-blue-light: #e6f0f7;
+    --pnu-blue-dark: #003e6b;
+    --pnu-gold: #A68B53;
+    --pnu-gold-light: #fdfaf3;
     --text-main: #333333;
     --text-muted: #666666;
     --bg-main: #FFFFFF;
@@ -18,12 +18,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
     color: var(--text-main);
     background-color: var(--bg-main);
     -webkit-font-smoothing: antialiased;
+    word-break: keep-all; /* 한글 줄바꿈 최적화 */
 }
 
 a {
@@ -60,7 +65,7 @@ ul {
 }
 
 .logo a {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 900;
     color: var(--pnu-blue);
     letter-spacing: 1px;
@@ -68,13 +73,14 @@ ul {
 
 .nav ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav a {
     font-weight: 500;
     color: var(--text-main);
     transition: color 0.3s;
+    font-size: 15px;
 }
 
 .nav a:hover {
@@ -84,7 +90,7 @@ ul {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--pnu-blue-light) 0%, #ffffff 100%);
-    padding: 100px 0;
+    padding: 80px 0;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
@@ -93,28 +99,29 @@ ul {
     display: inline-block;
     background-color: var(--pnu-blue);
     color: #ffffff;
-    padding: 8px 25px;
+    padding: 12px 35px; /* 패딩 증가 */
     border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 26px; /* 1.5배 가까이 확대 (18px -> 26px) */
+    font-weight: 800;
     margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0, 90, 155, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 90, 155, 0.2);
     border: 2px solid var(--pnu-gold);
+    line-height: 1.3;
 }
 
 .hero h2 {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 900;
     color: var(--pnu-blue);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.3;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-muted);
     margin-bottom: 40px;
-    max-width: 800px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -127,21 +134,21 @@ ul {
     display: inline-block;
     background-color: var(--pnu-blue);
     color: #ffffff;
-    padding: 15px 40px;
-    border-radius: 30px;
+    padding: 15px 45px;
+    border-radius: 35px;
     font-size: 18px;
     font-weight: 700;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: all 0.3s;
     box-shadow: 0 4px 6px rgba(0, 90, 155, 0.2);
 }
 
 .btn:hover {
     background-color: var(--pnu-blue-dark);
-    color: #ffffff;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 90, 155, 0.3);
 }
 
-/* Generic Section Styles */
+/* Sections */
 .section {
     padding: 100px 0;
 }
@@ -156,7 +163,7 @@ ul {
 }
 
 .section-title h2 {
-    font-size: 36px;
+    font-size: 32px;
     color: var(--pnu-blue);
     margin-bottom: 15px;
     position: relative;
@@ -174,26 +181,20 @@ ul {
     background-color: var(--pnu-gold);
 }
 
-.section-title p {
-    font-size: 18px;
-    color: var(--text-muted);
-}
-
 /* Vision Points */
 .vision-points {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+    gap: 30px;
 }
 
 .v-point {
     text-align: center;
     background: var(--pnu-gold-light);
-    padding: 40px 30px;
+    padding: 40px 25px;
     border-radius: 20px;
     border-bottom: 5px solid var(--pnu-gold);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .v-point:hover {
@@ -201,52 +202,24 @@ ul {
 }
 
 .v-icon {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 20px;
-}
-
-.v-point p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--text-main);
-}
-
-.v-point strong {
-    color: var(--pnu-blue);
-    font-size: 20px;
 }
 
 /* Strategy Cards */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
 }
 
 .card {
     background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 12px;
+    padding: 35px 25px;
+    border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     text-align: center;
-    transition: transform 0.3s;
     border: 1px solid var(--border-color);
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-bottom: 4px solid var(--pnu-blue);
-}
-
-.card-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    font-size: 22px;
-    color: var(--pnu-blue);
-    margin-bottom: 15px;
 }
 
 /* Roadmap */
@@ -260,340 +233,214 @@ ul {
 .step {
     background: #ffffff;
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
+    border-left: 6px solid var(--pnu-blue);
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--pnu-blue);
-    position: relative;
 }
 
-.step-number {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    background-color: var(--pnu-gold);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.step h3 {
-    color: var(--pnu-blue);
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.step-arrow {
-    font-size: 24px;
-    color: var(--pnu-gold);
-}
-
-/* Research List */
-.research-list {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.research-list li {
-    background: #ffffff;
-    margin-bottom: 15px;
-    padding: 20px 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    border-left: 3px solid var(--pnu-blue);
-}
-
-.research-list strong {
-    color: var(--pnu-blue);
-    display: block;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-/* Team Section Update */
+/* Team Section */
 .team-leader-card {
     background: #ffffff;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 40px;
-    margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0, 90, 155, 0.1);
+    margin-bottom: 60px;
+    box-shadow: 0 10px 40px rgba(0, 90, 155, 0.08);
     border: 1px solid var(--pnu-blue-light);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 
 .leader-info {
     width: 100%;
-    max-width: 800px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.badge {
-    background-color: var(--pnu-blue);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.leader-info h3 {
-    font-size: 32px;
-    color: var(--pnu-blue);
-    margin-bottom: 10px;
-}
-
-.specialty {
-    color: var(--pnu-gold);
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.achievements {
-    text-align: left;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.achievements li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.achievements li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--pnu-blue);
-    font-weight: bold;
-}
-
-.tab-container-center {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.tab-container-center .tab-btn {
-    max-width: 400px;
-}
-
-/* Faculty Grid */
 .faculty-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    margin-bottom: 50px;
 }
 
 .faculty-card {
     background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 35px 25px;
+    border-radius: 15px;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-}
-
-.faculty-card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    border-top: 4px solid var(--pnu-gold);
-    transform: translateY(-5px);
-}
-
-.faculty-card h3 {
-    color: var(--pnu-blue);
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.faculty-card .specialty {
-    font-size: 15px;
-    margin-bottom: 15px;
-    display: block;
-}
-
-.faculty-card .desc {
-    font-size: 15px;
-    color: var(--text-muted);
-    margin-bottom: 15px;
-}
-
-/* Tabs */
-.tab-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--pnu-blue-light);
-    color: var(--pnu-blue);
-    border: 1px solid var(--pnu-blue);
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.tab-btn:hover, .tab-btn.active {
-    background-color: var(--pnu-blue);
-    color: white;
-}
-
-.research-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
-    background: #fdfdfd;
+/* Tabs & Content */
+.tab-btn {
     width: 100%;
-    text-align: left;
+    padding: 12px;
+    background-color: var(--pnu-blue-light);
+    color: var(--pnu-blue);
+    border: 1.5px solid var(--pnu-blue);
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.2s;
 }
 
 .research-content.active {
-    max-height: 500px;
-    padding: 20px 0;
+    max-height: 1000px;
+    padding: 20px 10px;
     border-top: 1px dashed var(--border-color);
     margin-top: 15px;
+    width: 100%;
 }
 
-.research-content ul {
-    padding-left: 20px;
-}
-
-.research-content li {
-    font-size: 14px;
-    margin-bottom: 10px;
-    position: relative;
-    list-style: disc;
-    color: var(--text-main);
-}
-
-/* Network Section Centered & Large */
+/* Network Section */
 .network-section {
     background: #ffffff;
-    padding: 60px 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.network-info-centered {
-    text-align: center;
-    margin-bottom: 50px;
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
 }
 
 .network-info-centered h3 {
-    color: var(--pnu-blue);
     font-size: 32px;
+    color: var(--pnu-blue);
     margin-bottom: 25px;
-    position: relative;
-    display: inline-block;
-}
-
-.network-info-centered h3::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--pnu-gold);
-}
-
-.network-highlights-large {
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .network-highlights-large p {
-    font-size: 20px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: var(--text-main);
-}
-
-.network-highlights-large strong {
-    color: var(--pnu-blue);
+    font-size: 19px;
+    max-width: 900px;
+    margin: 0 auto 15px;
 }
 
 .logo-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    align-items: flex-start;
+    gap: 40px;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .logo-item {
-    flex: 0 1 200px;
+    flex: 0 1 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    transition: transform 0.3s;
+    gap: 12px;
 }
 
 .logo-item img {
-    height: 50px;
+    height: 40px;
     width: auto;
-    max-width: 100%;
     object-fit: contain;
 }
 
 .inst-name {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
-    color: var(--text-muted);
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
-    line-height: 1.2;
-}
-
-.logo-item:hover {
-    transform: translateY(-5px);
-}
-
-.logo-item:hover .inst-name {
-    color: var(--pnu-blue);
+    color: var(--text-muted);
 }
 
 /* Footer */
 .footer {
     background-color: var(--pnu-blue-dark);
     color: #ffffff;
+    padding: 50px 20px;
     text-align: center;
-    padding: 40px 0;
 }
 
-.footer p {
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
+/* --- Responsive Media Queries --- */
 
-/* Responsive */
+/* 태블릿 및 스마트폰 공통 (768px 이하) */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         height: auto;
-        padding: 20px 0;
+        padding: 15px 0;
         gap: 15px;
     }
-    
+
+    .nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .team-official-name {
+        font-size: 20px; /* 모바일에서는 적절히 축소 */
+        padding: 10px 20px;
+    }
+
     .hero h2 {
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .faculty-grid {
+        grid-template-columns: 1fr; /* 모바일 한 줄 배열 */
+    }
+
+    .network-info-centered h3 {
+        font-size: 24px;
+    }
+
+    .network-highlights-large p {
+        font-size: 16px;
+    }
+
+    .logo-item {
+        flex: 0 1 40%; /* 모바일에서 2개씩 배치 */
+    }
+}
+
+/* 스마트폰 (480px 이하) */
+@media (max-width: 480px) {
+    .team-official-name {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .logo-item {
+        flex: 0 1 100%; /* 아주 작은 화면에선 한 줄에 하나 */
+    }
+
+    .card {
+        padding: 25px 15px;
+    }
+
+    .step {
+        padding: 20px;
     }
 }
